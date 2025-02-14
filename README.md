@@ -1,46 +1,20 @@
-# HTML
+1. a tag 사용법 : 네비게이션
 
-    1. 컴포넌트가 시작되는 부모요소는 늘 하나다.
-    2. 클래스를 부모요소에게 준 다음에 시작한다.
-    3. 클래스를 마구잡이로 부여하지 않는다. 시맨틱 태그를 써서 해결
+   - href 속성에 값을 부여함
 
-# CSS
+     1. url : 다른 웹사이트로 이동함
 
-    1.  .클래스.클래스.... : 여러가지 클래스가 한꺼번에 들어간 태그를 선택
-        - 응용 : #아이디#아이디... : 여러가지 아이디가 한꺼번에 들어간 태그를 선택
-        - 한 번 정의해둔 클래스를 다른 태그에서도 마음껏 사용할 수 있음
-            - 공통된 스타일을 저장하는 용도로 사용하면 좋음.
-    2.  선행 선택자 + 마지막 선택자 : 마지막 선택자가 내가 스타일링을 줄 태그임.
-    3. position :
-        relative : 부모요소로 지정, 기준이 됨
-        absolute : 자식요소로 지정, 기준을 따라감
-            **주의사항** : top, left 또는 top, right 또는 bottom, left 또는 bottom right로만 작성하면 됨.
-            - content : '';
-                **가상요소만드는 친구** : absolute를 섞어서 사용하면 좋음
-    4. object-fit :
-        - cover : 찌그러진 사진을 예쁘게 펴줌. 단점 : 위치조정은 안됨
-    5. 태그 + 태그 : 태그 옆의 태그를 선택할 수 있음.
-    6. input에서 : checked라고 하는 상태를 선택할 수 있음.
-    7. transition : 애니메이션 효과를 적용할 수 있음
-        - 예시 : transition: all .5s(속도)
-    8. label, span : display 속성을 block으로 줘야만 눈으로 확인할 수 있음.
+        - 주소값을 입력하면 되는데 http 또는 https + :// 부터 다 적어줘야 작동함
 
-# JS
+     2. #id : 해당 id와 동일한 id를 가진 태그로 이동함 ( 현재 페이지 내 )
 
-    1. document : DOM (Document Object Model) : 웹 그 자체
-    2. document.querySelector : CSS 작성 규칙을 따라서 잡아옴
-        - 예시 : const body = document.querySelector('body')
-        - 예시 : const btn = document.querySelector('body.btn')
-            **주의** 클래스명은 많은 곳에서 사용할 수 있기 때문에 btn은 복수가 될 수도 있음.
-    3. document.createElement : 태그를 만들어줌
-        - 예시 : const button = document.createElement('button')
-    4. 잡아온태그.onclick = 화살표 함수를 사용해서 클릭하는 이벤트를 설정할 수 있음.
-    5. setInterval : 설정한 시간 단위마다 계속해서 반복적으로 실행되는 코드를 짤 수 있음
-        - 예시
-        const intervalId = setInterval(
-            () => {
-                .... 실행할 코드
-            }, 3000 // 3초(3000밀리세컨드)
-        )
-        **주의사항** : 새로고침 이외에 멈출 방법이 하나밖에 없음, intervalId를 사용해서 꺼줘야 함
-            - 예시 : clearInterval(intervalId)  // 이거쓰면 멈춤
+        - 이동시킬 태그에 id값을 넣고
+        - a 태그 href 안에 # + id와 동일한 값을 넣으면 연결 완료
+        - 연결된 태그 누를 때 마다 주소창의 주소값 끝에 해당 아이디가 붙음
+
+     3. 파일명 : 해당 파일로 이동 ( 페이지 전환 )
+        예 ) index.html
+
+        - href 안에 파일명 적어주면 됨
+
+     4. 파일 다운로드 : 파일
