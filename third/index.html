@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>signupform</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <h1>회원가입 ㄱㄱ</h1>
+      <form id="signUp">
+        <label for="userId">아이디</label>
+        <input type="text" placeholder="영어로 입력해주세요" id="userId" />
+        <label for="password">비밀번호</label>
+        <input
+          type="password"
+          placeholder="뭐 적당히 입력하세요"
+          id="password"
+        />
+        <label for="confirmPassword">비밀번호 확인</label>
+        <input
+          type="password"
+          placeholder="위에랑 똑같이 입력하시죠"
+          id="confirmPassword"
+        />
+        <label for="birthDate">생년월일</label>
+        <input type="text" placeholder="YYYYMMDD" id="birthDate" />
+        <label for="sex">성별</label>
+        <select id="sex">
+          <option>성별 선택</option>
+          <option value="남성">남성</option>
+          <option value="여성">여성</option>
+        </select>
+        <div id="btn">
+          <button type="submit">제출</button>
+          <button type="button">취소</button>
+          <button type="reset">초기화</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
