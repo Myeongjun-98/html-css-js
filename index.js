@@ -3,7 +3,7 @@ const imgs = [
   "https://cdn-icons-png.flaticon.com/128/3562/3562093.png",
   "https://cdn-icons-png.flaticon.com/128/12355/12355903.png",
 ];
-const messages = ["안내면 진다", "가위", "바위", "보"];
+const messages = ["안내면 진다", "가위✌🏻", "바위✊🏻", "보🖐🏻!"];
 
 const generateRandomNumber = () => Math.floor(Math.random() * 3);
 
@@ -24,18 +24,18 @@ images.forEach((image, index) => (image.src = imgs[index]));
 
 const whoWins = (v1, v2) => {
   if (v1 === v2) {
-    return "비겼다";
+    return "비겼다..";
   }
   if (v1 === 0 && v2 === 1) {
-    return "짐";
+    return "졌다...";
   }
   if (v1 === 1 && v2 === 2) {
-    return "짐";
+    return "졌다...";
   }
   if (v1 === 2 && v2 === 0) {
-    return "짐";
+    return "졌다...";
   }
-  return "이김";
+  return "이겼다!";
 };
 
 button.onclick = () => {
@@ -52,7 +52,7 @@ button.onclick = () => {
     imgIndex2 = generateRandomNumber();
     images[0].src = imgs[imgIndex1];
     images[2].src = imgs[imgIndex2];
-    if (index === 4) {
+    if (index === 5) {
       clearInterval(imgId);
       h1.innerText = whoWins(imgIndex1, imgIndex2);
       button.innerText = "한 판 더!";
